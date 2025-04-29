@@ -27,6 +27,8 @@ SECRET_KEY = 'django-insecure-pd5gc0x+ea#z0o6yw5ofxprz-*!cz!3_hzkii224jddj7c9g9q
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.10.250','plastixwelding.topitsolutions.co.nz','plastixwelding.co.nz']
+CSRF_TRUSTED_ORIGINS = [
+    'https://plastixwelding.topitsolutions.co.nz','http://plastixwelding.topitsolutions.co.nz','https://plastixwelding.co.nz','http://plastixwelding.co.nz']
 
 
 # Application definition
