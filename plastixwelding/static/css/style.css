@@ -21,18 +21,22 @@
     
     @media (max-width: 576px) {
       .site-logo {
-        max-width: 80px;  /* Reduced further to make it smaller */
-        margin-right: 10px; /* Adjust for proper spacing */
+        max-width: 60px;
       }
     
       .site-name {
         font-size: 1rem;
       }
     
-      .hamburger-menu {
-        font-size: 1.5rem;  /* Adjust hamburger icon size */
+      .navbar-brand {
+        gap: 0.5rem;
+      }
+    
+      .navbar-toggler {
+        padding: 0.25rem 0.5rem;
       }
     }
+    
     .nav-container {
     font-family: 'Roboto', sans-serif;
       width: 90%;
