@@ -14,6 +14,19 @@
       font-family: 'Lora', serif;
 
     }
+    .site-logo {
+      max-width: 140px;
+      height: auto;
+    }
+    
+    @media (max-width: 576px) {
+      .site-logo {
+        max-width: 100px;
+      }
+      .site-name {
+        font-size: 1rem;
+      }
+    }
     .nav-container {
     font-family: 'Roboto', sans-serif;
       width: 90%;
