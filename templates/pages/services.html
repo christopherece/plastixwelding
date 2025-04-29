@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="banner text-white text-center py-4" style="background-color: #0171bb;">
+    <div class="container">
+        <h1>Expert Plastic Welding Repairs</h1>
+        <p>Your trusted solution for durable and reliable plastic welding services.</p>
+    </div>
+</section>
+
+<section class="service-details container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="service-title">Hot Air Welding</h3>
+            <p class="service-desc">
+                Our Hot Air Welding process is ideal for joining thermoplastic materials, making it perfect for repairs on items like plastic pipes, tanks, and more. It’s a cost-effective solution for both small and large-scale repairs.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3 class="service-title">Chemical Welding</h3>
+            <p class="service-desc">
+                Chemical welding is ideal for bonding materials that are hard to weld with traditional methods. Our expertise in this technique ensures a seamless, strong bond that is perfect for plastic and metal composite repairs.
+            </p>
+        </div>
+    </div>
+  
+    <!-- Add additional services as needed -->
+</section>
+
+  {%include 'partials/_commitment.html' %}
+
+
+{%endblock content %} 

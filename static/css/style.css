@@ -320,7 +320,7 @@
     }
     .commitment-img {
       max-width: 210px;
-      flex: 1 1 210px;
+      flex: 1 1 10px;
       border-radius: 12px;
       margin-right: 18px;
       object-fit: cover;

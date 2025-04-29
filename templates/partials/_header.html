@@ -1,10 +1,10 @@
 {% load static %}
 <header class="border-bottom bg-white">
-  <nav class="navbar navbar-expand-md navbar-light container py-3">
+  <nav class="navbar navbar-expand-md navbar-light container py-1">
     <div>
       <div class="site-title text-dark mb-0">
-        <img src="{% static 'images/logo2.png' %}" alt="Plastix Welding Logo" class="site-logo" width="150px" height="auto">
-        <span class="site-name" style="color: #666666">Huapai Plastic Welding</span>
+        <img src="{% static 'images/logo2.png' %}" alt="Plastix Welding Logo" class="site-logo" width="140px" height="auto">
+        <span class="site-name" style="color: #666666; font-size: 1.4rem;">Huapai Plastic Welding</span>
       </div>
       {% comment %} <div class="site-tagline small text-muted">If it’s plastic, I can fix it!</div> {% endcomment %}
     </div>
@@ -12,18 +12,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav gap-3">
+      <ul class="navbar-nav gap-4">
         <li class="nav-item">
-          <a class="nav-link active fw-bold" href="#">Home</a>
+          <a class="nav-link active fw-bold" href="{% url 'index' %}" style="font-size: 1.2rem;">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="{% url 'services' %}" style="font-size: 1.2rem;">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="{% url 'gallery' %}" style="font-size: 1.2rem;">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="{% url 'index' %}#contact" style="font-size: 1.2rem;">Contact</a>
         </li>
       </ul>
     </div>

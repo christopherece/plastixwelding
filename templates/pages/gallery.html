@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Banner Section -->
+<section class="banner text-white text-center py-4" style="background-color: #0171bb;"> 
+  <div class="container">
+    <h1>Our Work Gallery</h1>
+    <p>Explore our completed projects and see the quality of our plastic welding repairs.</p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="container my-5">
+  <h2 class="mb-4 text-center">Gallery</h2>
+  <div class="row">
+    {% for image in images %}
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="{{ image.image.url }}" alt="{{ image.title }}" class="card-img-top" 
+               style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px;">
+          {% if image.title %}
+          <div class="card-body">
+            <p class="card-text text-center">{{ image.title }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% include 'partials/_commitment.html' %}
+
+{% endblock content %}
