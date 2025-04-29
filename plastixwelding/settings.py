@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-pd5gc0x+ea#z0o6yw5ofxprz-*!cz!3_hzkii224jddj7c9g9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.10.250','plastixwelding.topitsolutions.co.nz','plastixwelding.co.nz']
 
 
 # Application definition
