@@ -4,6 +4,8 @@ from .models import ContactInfo
 # Register your models here.
 from .models import GalleryImage
 from .models import ServiceCategory, Service
+from .models import ContactMessage
+
 
 
 @admin.register(GalleryImage)
@@ -27,3 +29,11 @@ class ServiceAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', 'description')
     list_filter = ('category',)  # Filter services by category in the admin panel
     search_fields = ('name', 'description')
+
+
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ('full_name', 'email', 'submitted_at')
+    search_fields = ('full_name', 'email')
+    readonly_fields = ('submitted_at',)

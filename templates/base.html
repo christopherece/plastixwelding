@@ -58,6 +58,19 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
 
+  <script>
+    window.onload = function() {
+      // Check if the success message exists
+      var successMessage = document.getElementById('success-message');
+      if (successMessage) {
+        // Set a timeout to remove the message after 3 seconds
+        setTimeout(function() {
+          successMessage.style.display = 'none';
+        }, 3000); // 3000 milliseconds = 3 seconds
+      }
+    };
+  </script>
+
 </body>
 
 </html>
