@@ -13,18 +13,23 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav gap-4">
         <li class="nav-item">
-          <a class="nav-link active fw-bold" href="{% url 'index' %}" style="font-size: 1.2rem;">Home</a>
+          <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}" style="font-size: 1.2rem; color: {% if request.path == '/' %}#0171bb{% else %}black{% endif %};">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'services' %}" style="font-size: 1.2rem;">Services</a>
+          <a class="nav-link {% if 'services' in request.path %}active{% endif %}" href="{% url 'services' %}" style="font-size: 1.2rem; color: {% if 'services' in request.path %}#0171bb{% else %}black{% endif %};">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'gallery' %}" style="font-size: 1.2rem;">Gallery</a>
+          <a class="nav-link {% if 'gallery' in request.path %}active{% endif %}" href="{% url 'gallery' %}" style="font-size: 1.2rem; color: {% if 'gallery' in request.path %}#0171bb{% else %}black{% endif %};">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'index' %}#contact" style="font-size: 1.2rem;">Contact</a>
+          <a class="nav-link {% if 'contact' in request.path or '#contact' in request.get_full_path %}active{% endif %}" href="{% url 'index' %}#contact" style="font-size: 1.2rem; color: {% if 'contact' in request.path or '#contact' in request.get_full_path %}#0171bb{% else %}black{% endif %};">Contact</a>
         </li>
       </ul>
     </div>
+    
+    
+    
+    
+    
   </nav>
 </header>

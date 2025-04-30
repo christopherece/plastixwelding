@@ -37,6 +37,14 @@ header {
   }
 }
 
+.nav-link {
+    color: black; /* Default color for inactive links */
+}
+
+.nav-link.active {
+    color: #0171bb !important; /* Color for active links */
+}
+
 
 .nav-container {
 font-family: 'Roboto', sans-serif;
@@ -98,7 +106,6 @@ section.hero {
   background: #f7f8fa;
   border: 3px solid #bdbec1;
   border-radius: 15px;
-  display: flex;
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
