@@ -88,14 +88,12 @@ section.hero {
 }
 .hero-left {
   flex: 1 1 44%;
-  min-height: 320px;
   background: #f7f8fa;
   border: 3px solid #bdbec1;
   border-radius: 15px;
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
-  height: 330px;
   box-sizing: border-box;
 }
 .hero-left img {
