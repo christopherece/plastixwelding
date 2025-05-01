@@ -18,9 +18,22 @@ header {
   max-width: 140px;
   height: auto;
 }
-@media (min-width: 992px) {
-  .hero-left {
-    max-height: 500px;
+
+@media (max-width: 576px) {
+  .site-logo {
+    max-width: 60px;
+  }
+
+  .site-name {
+    font-size: 1rem;
+  }
+
+  .navbar-brand {
+    gap: 0.5rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
   }
 }
 
