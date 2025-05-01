@@ -65,21 +65,31 @@
   <p class="services-label">Our Services</p>
   <h2 class="services-title">Comprehensive Plastic & Fibreglass Repair Solutions</h2>
 
-  <div class="services-list row">
-    <div class="col-md-6">
-      <h5 class="mb-2">Plastic Welding Services</h5>
-      <ul>
-        <li>Hot Air Welding</li>
-        <li>Extrusion Welding</li>
-        <li>Strength Reinforcement</li>
-        <li>ABS Plastic Specialist</li>
-        <li>PVC Gutter Welding</li>
-        <li>Plastic Boat Repairs</li>
-        <li>Water Tank & Kayak Repairs</li>
-      </ul>
+  <div class="row">
+    <div class="col-md-8">
+      <h4 class="mb-2">Plastic Welding Services</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li>Hot Air Welding</li>
+            <li>Extrusion Welding</li>
+            <li>Strength Reinforcement</li>
+            <li>Automotive & Motorcycle Repair</li>
+            <li>Shower Tray Repair</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>ABS Plastic Specialist</li>
+            <li>PVC Gutter Welding</li>
+            <li>Plastic Boat Repairs</li>
+            <li>Water Tank & Kayak Repairs</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h5 class="mb-2">Fibreglass Repairs</h5>
+    <div class="col-md-4">
+      <h4 class="mb-2">Fibreglass Repairs</h5>
       <ul>
         <li>Swimming Pools</li>
         <li>Spa Pools</li>
@@ -89,6 +99,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- About & Contact Info -->
 <section class="about-contact container my-5">
@@ -105,12 +116,16 @@
       </p>
       <div class="mt-4">
         <h5>Contact Us</h5>
-        <p class="mb-1">📍 {{ contact.address }}</p>
+        {% comment %} <p class="mb-1">📍 {{ contact.address }}</p>
         <p class="mb-1">📞 <a href="tel:{{ contact.phone|cut:' ' }}">{{ contact.phone }}</a></p>
         <p class="mb-1">📧 <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
         {% if contact.facebook_url %}
           <p>🔗 <a href="{{ contact.facebook_url }}" target="_blank" rel="noopener noreferrer">Find us on Facebook</a></p>
-        {% endif %}
+        {% endif %} {% endcomment %}
+
+        <p class="mb-1">📞 <a href="tel:0224036067">0224036067</a></p>
+        <p class="mb-1">📧 <a href="mailto:hpwrepair@gmail.com">hpwrepair@gmail.com</a></p>
+        <p>🔗 <a href="https://www.facebook.com/p/Huapai-Plastic-Welding-Repairs-61557365655758/" target="_blank" rel="noopener noreferrer">Find us on Facebook</a></p>
       </div>
     </div>
 
