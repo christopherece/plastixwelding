@@ -21,7 +21,7 @@ header {
 
 @media (max-width: 576px) {
   .site-logo {
-    max-width: 60px;
+    max-width: 120px;
   }
 
   .site-name {
