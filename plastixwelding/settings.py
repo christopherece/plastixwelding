@@ -26,13 +26,13 @@ SECRET_KEY = 'django-insecure-pd5gc0x+ea#z0o6yw5ofxprz-*!cz!3_hzkii224jddj7c9g9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '192.168.10.64', '192.168.10.250','plastixwelding.topitsolutions.co.nz','plastixwelding.co.nz','testplastixwelding.topitsolutions.co.nz']
+ALLOWED_HOSTS = ['localhost', '192.168.10.64', '192.168.10.250','plastixwelding.co.nz','www.plastixwelding.co.nz']
 CSRF_TRUSTED_ORIGINS = [
-    'https://plastixwelding.topitsolutions.co.nz','http://plastixwelding.topitsolutions.co.nz','https://plastixwelding.co.nz','http://plastixwelding.co.nz']
+    'https://plastixwelding.co.nz','http://plastixwelding.co.nz']
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = False  # or False if you want NGINX to handle HTTPS entirely
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
-SECURE_SSL_REDIRECT = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -133,12 +133,5 @@ MESSAGE_TAGS = {
 
 }
 
-
-#Email Config
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'noreply.singhub@gmail.com'
-EMAIL_HOST_PASSWORD = 'rzrxiflerdlxczlb'
-EMAIL_USE_TLS = True
 
 
