@@ -31,6 +31,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://plastixwelding.topitsolutions.co.nz','http://plastixwelding.topitsolutions.co.nz','https://plastixwelding.co.nz','http://plastixwelding.co.nz']
 
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
+SECURE_SSL_REDIRECT = True
 # Application definition
 
 INSTALLED_APPS = [
