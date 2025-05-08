@@ -2,6 +2,9 @@
 {% load static %}
 {% block content %}
 
+<!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
 <!-- Banner Section -->
 <section class="banner text-white text-center py-4" style="background-color: #0171bb;"> 
   <div class="container">
@@ -17,8 +20,10 @@
     {% for image in images %}
       <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="{{ image.image.url }}" alt="{{ image.title }}" class="card-img-top" 
-               style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px;">
+          <a href="{{ image.image.url }}" class="glightbox" data-gallery="gallery1" data-title="{{ image.title }}">
+            <img src="{{ image.image.url }}" alt="{{ image.title }}" class="card-img-top" 
+                 style="width: 100%; height: 250px; object-fit: cover; border-radius: 4px;">
+          </a>
           {% if image.title %}
           <div class="card-body">
             <p class="card-text text-center">{{ image.title }}</p>
@@ -31,5 +36,15 @@
 </section>
 
 {% include 'partials/_commitment.html' %}
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
+</script>
 
 {% endblock content %}
