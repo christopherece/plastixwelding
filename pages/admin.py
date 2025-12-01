@@ -10,7 +10,7 @@ from .models import ContactMessage
 
 @admin.register(GalleryImage)
 class GalleryImageAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'uploaded_at')
+    list_display = ('id', 'title','description', 'uploaded_at')
     search_fields = ('title',)
     ordering = ('-uploaded_at',)
 

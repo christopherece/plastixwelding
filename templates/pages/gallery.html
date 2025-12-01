@@ -27,6 +27,11 @@
           {% if image.title %}
           <div class="card-body">
             <p class="card-text text-center">{{ image.title }}</p>
+            
+            {% if image.description %}  
+              <p>{{ image.description }}</p>
+            {% endif %}
+
           </div>
           {% endif %}
         </div>
