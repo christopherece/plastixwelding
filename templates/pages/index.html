@@ -3,79 +3,722 @@
 
 {% block content %}
 
-<!-- Bootstrap Carousel Hero Section -->
-<section class="hero container d-flex flex-column flex-lg-row gap-5 align-items-center my-5">
-  <!-- Image Carousel (Left) -->
-  <div id="heroImageCarousel" class="carousel slide shadow-sm w-100" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <img 
-          src="{% static 'images/huapai01.png' %}" 
-          alt="Plastic welding repair" 
-          class="img-fluid w-100 rounded"
-          style="object-fit: cover; object-position: center;"
-        >
+<!-- Hero Carousel Section -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="hero-slide" style="background-image: url('{% static 'images/heroservices.png' %}');">
+        <div class="container h-100 position-relative">
+          <div class="row h-100 align-items-center">
+            <div class="col-lg-5 text-lg-start text-center">
+              <h1 class="hero-title">Plastic Welding & Fiberglass Repairs</h1>
+              <p class="hero-subtitle">Professional repairs for all your plastic and fiberglass needs across Auckland</p>
+              <div class="hero-buttons mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg me-3">Get a Quote</a>
+                <a href="{% url 'services' %}" class="btn btn-outline-light btn-lg">Our Services</a>
+              </div>
+            </div>
+            
+            <!-- Services Overlay -->
+            <div class="col-lg-7">
+              <div class="services-overlay">
+                <h4>OUR SERVICES</h4>
+                <div class="service-card">
+                  <div class="service-content">
+                    <h3>Plastic Welding Services</h3>
+                    <p>Expert repairs for all types of plastic materials and structures</p>
+                  </div>
+                </div>
+                
+                <div class="service-card">
+                  <div class="service-content">
+                    <h3>Fibreglass Repairs</h3>
+                    <p>Professional repairs for fibreglass pools, boats, and more</p>
+                  </div>
+                </div>
+                
+                <div class="service-card">
+                  <div class="service-content">
+                    <h3>Electrofusion Welding</h3>
+                    <p>Precision welding for HDPE pipes and fittings</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img 
-          src="{% static 'images/services.png' %}" 
-          alt="Plastic welding repair" 
-          class="img-fluid w-100 rounded"
-          style="object-fit: cover; object-position: center;"
-        >
-      </div>
-      <!-- Slide 3 -->
-      <!-- <div class="carousel-item">
-        <img 
-          src="{% static 'images/huapai1.jpg' %}" 
-          alt="Plastic welding repair" 
-          class="img-fluid w-100 rounded"
-          style="object-fit: cover; object-position: center;"
-        >
-      </div>  -->
-
-      <div class="carousel-item">
-        <img 
-          src="{% static 'images/huapai02.png' %}" 
-          alt="Plastic welding repair" 
-          class="img-fluid w-100 rounded"
-          style="object-fit: cover; object-position: center;"
-        >
-      </div>
-      <div class="carousel-item">
-        <img 
-          src="{% static 'images/huapai3.jpg' %}" 
-          alt="Plastic welding repair" 
-          class="img-fluid w-100 rounded"
-          style="object-fit: cover; object-position: center;"
-        >
-      </div>
-      
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroImageCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroImageCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    
+    <!-- Slide 2 -->
+    <!-- <div class="carousel-item">
+      <div class="hero-slide" style="background-image: url('{% static 'images/huapai0.png' %}');">
+        <div class="container h-100 position-relative">
+          <div class="row h-100 align-items-center">
+            <div class="col-lg-5 text-lg-start text-center">
+              <h1 class="hero-title">Expert Tank & Container Repairs</h1>
+              <p class="hero-subtitle">Specializing in water tanks, fuel tanks, and industrial containers</p>
+              <div class="hero-buttons mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg me-3">Contact Us</a>
+                <a href="#gallery" class="btn btn-outline-light btn-lg">View Gallery</a>
+              </div>
+            </div>
+            
+            <div class="col-lg-7">
+              <div class="services-overlay">
+                <h4>OUR SERVICES</h4>
+                <div class="service-card">
+                  <div class="service-content">
+                    <h3>Plastic Welding Services</h3>
+                    <p>Expert repairs for all types of plastic materials and structures</p>
+                  </div>
+                </div>
+                
+                <div class="service-card">
+                  <div class="service-content">
+                    <h3>Fibreglass Repairs</h3>
+                    <p>Professional repairs for fibreglass pools, boats, and more</p>
+                  </div>
+                </div>
+                
+                <div class="service-card">
+                  <div class="service-content">
+                    <h3>Electrofusion Welding</h3>
+                    <p>Precision welding for HDPE pipes and fittings</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </div>
+  
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-  <!-- Right Side Content -->
-  <div class="hero-right text-center text-lg-start">
-    <p class="hero-loc">Huapai Plastic Welding & Repairs</p>
-    <h1 class="hero-headline">Plastic Welding & Fibreglass Repair</h1>
-    <p class="hero-desc">
-      When plastic breaks, we are here to fix it. Our professional welding services restore strength and functionality to all types of plastic, offering fast, durable repairs you can trust.
-    </p>
-    <div class="hero-btns d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
-      <a href="#contact" class="btn btn-lg rounded-pill text-dark fw-bold px-4" style="background-color:#0171bb">Get a Quote</a>
-      <a href="{% url 'services' %}" class="btn btn-dark btn-lg rounded-pill px-4">View Services</a>
-    </div>
-  </div>
-</section>
+<style>
+/* Hero Carousel Styles */
+#heroCarousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 2;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  max-width: 80%;
+  line-height: 1.7;
+  font-weight: 300;
+  position: relative;
+  z-index: 2;
+  font-family: 'Lora', serif;
+  font-style: italic;
+}
+
+.hero-buttons .btn {
+  padding: 0.85rem 2.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 0.85rem;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+  border-width: 2px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero-buttons .btn-primary {
+  background-color: #0171bb;
+  border-color: #0171bb;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #015a94;
+  border-color: #015a94;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-buttons .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.hero-buttons .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Overlay */
+.services-overlay {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  will-change: transform, box-shadow;
+}
+
+.services-overlay:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.services-overlay h4 {
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0 0 1rem 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.services-overlay h4:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 60px;
+  height: 2px;
+  background: #fff;
+  background: linear-gradient(90deg, #0171bb, rgba(255,255,255,0.8));
+  box-shadow: 0 0 15px rgba(1, 113, 187, 0.3);
+  transition: width 0.3s ease;
+}
+
+.services-overlay h4:hover:after {
+  width: 80px;
+}
+
+/* Service Cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 12px;
+  padding: 2.25rem 2.5rem 2.25rem 3.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  border-left: 6px solid #0171bb;
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+}
+
+.service-card .service-content {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card h3 {
+  color: #1a365d;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+  position: relative;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+
+.service-card p {
+  color: #2d3748;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  max-width: 100%;
+  padding-left: 1rem;
+  border-left: 3px solid #e2e8f0;
+  font-family: 'Lora', serif;
+  font-style: italic;
+}
+
+/* Service card hover effects */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(1, 113, 187, 0.05);
+  transition: width 0.3s ease;
+  z-index: 0;
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 1.75rem 2rem 1.75rem 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .service-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding-left: 0.75rem;
+  }
+  .service-card {
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+}
+
+/* Scrollbar styling */
+.services-overlay::-webkit-scrollbar {
+  width: 6px;
+}
+
+.services-overlay::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+.services-overlay::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.services-overlay::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+  width: 8px;
+}
+
+.service-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 18px 20px;
+  border-left: 4px solid #00b4db;
+}
+
+.service-card .service-content {
+  padding: 0 0 0 16px;
+  position: relative;
+}
+
+.service-card h3 {
+  color: #1a365d;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+}
+
+.service-card h3:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #00b4db;
+  transition: all 0.3s ease;
+}
+
+.service-card p {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+}
+
+.service-card:last-child {
+  margin-bottom: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 132, 255, 0.15);
+  background: #f8fafc;
+  border-left-color: #0083b0;
+}
+
+.service-card:hover h3:after {
+  width: 100%;
+  background: #0083b0;
+}
+
+.service-card:hover p {
+  color: #2d3748;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+  
+  .service-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .service-card .service-content {
+    padding-left: 12px;
+  }
+}
+
+.service-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #0a1f3d;
+  line-height: 1.4;
+  padding: 0 0 0 0.5rem;
+  position: relative;
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+  padding: 0 0 0 0.5rem;
+  opacity: 0.9;
+}
+
+/* Scrollbar styling */
+.services-overlay::-webkit-scrollbar {
+  width: 6px;
+}
+
+.services-overlay::-webkit-scrollbar-track {
+  background: rgba(1, 113, 187, 0.05);
+  border-radius: 10px;
+}
+
+.services-overlay::-webkit-scrollbar-thumb {
+  background: rgba(1, 113, 187, 0.3);
+  border-radius: 10px;
+}
+
+.services-overlay::-webkit-scrollbar-thumb:hover {
+  background: rgba(1, 113, 187, 0.5);
+}
+
+/* Scrollbar styling for the overlay */
+.services-overlay::-webkit-scrollbar {
+  width: 6px;
+}
+
+.services-overlay::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+
+.services-overlay::-webkit-scrollbar-thumb {
+  background: rgba(1, 113, 187, 0.3);
+  border-radius: 10px;
+}
+
+.services-overlay::-webkit-scrollbar-thumb:hover {
+  background: rgba(1, 113, 187, 0.5);
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: 100% 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1199.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .service-content h3 {
+    font-size: 1rem;
+  }
+  
+  .service-content p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-slide {
+    height: auto;
+    min-height: 600px;
+    padding: 4rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 auto 1rem;
+    max-width: 90%;
+  }
+  
+  .hero-subtitle {
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 90%;
+  }
+  
+  .hero-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .services-overlay {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-slide {
+    min-height: 500px;
+    padding: 3rem 0;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-buttons .btn:last-child {
+    margin-bottom: 0;
+  }
+  
+  .service-card {
+    padding: 0.75rem 0;
+  }
+  
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Services Section */
+.services-section {
+  padding: 8rem 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 8rem 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.05), transparent);
+}
+
+.testimonial-card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-role {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+</style>
+
+
+
 
 
 
@@ -88,41 +731,53 @@
 {% endif %}
 <!-- Services Section -->
 <section class="services-overview container bg-white rounded shadow-sm p-4">
-  <p class="services-label">Our Services</p>
-  <h2 class="services-title">Comprehensive Plastic & Fibreglass Repair Solutions</h2>
-
+  <p class="services-label">Our Expertise</p>
   <div class="row">
-    <div class="col-md-8">
-      <h4 class="mb-2">Plastic Welding Services</h5>
+    <div class="col-md-7">
+        <h2 class="services-title">Comprehensive Plastic & Fibreglass Repair Solutions</h2>
+
       <div class="row">
         <div class="col-md-6">
+          <h4 class="mb-2">Plastic Welding Services</h5>
           <ul>
             <li>Hot Air Welding</li>
-            <li>Extrusion Welding</li>
-            <li>Strength Reinforcement</li>
+            <!-- <li>Extrusion Welding</li>
+            <li>Strength Reinforcement</li> -->
             <!-- <li>Automotive & Motorcycle Plastic Repair</li> -->
+             <li>Shower Tray Repair</li>
+            <li>Electrofusion Welding</li>
+            <li>Plastic Boat Repairs</li>
+            <li>Water Tank & Kayak Repairs</li>
             
           </ul>
         </div>
         <div class="col-md-6">
+          <h4 class="mb-2">Fibreglass Repairs</h5>
           <ul>
-            <li>Shower Tray Repair</li>
-            <li>Electrofusion Welding</li>
-            <li>Plastic Boat Repairs</li>
-            <li>Water Tank & Kayak Repairs</li>
-
-          </ul>
+            <li>Swimming Pools</li>
+            <li>Spa Pools</li>
+            <li>Boats</li>
+            <li>Caravans</li>
+        </ul>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <h4 class="mb-2">Fibreglass Repairs</h5>
-      <ul>
-        <li>Swimming Pools</li>
-        <li>Spa Pools</li>
-        <li>Boats</li>
-        <li>Caravans</li>
-      </ul>
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-6">
+        <h2 class="services-title">Electrofusion Welding</h2>
+              <ul>
+                <li>Agricultural Pipe Welding</li>
+                <li>Civil Pipe Welding</li>
+                <li>Water, Sewer, Pipes</li>
+                <li>Water Tank Welding</li>
+              </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'images/sitesafe.jpg' %}" style="width: 220px;">
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -141,6 +796,9 @@
         We also offer sustainable, cost-effective solutions — from farm equipment to water tanks and more. No job is too big or too small:
         <strong>Don’t replace it – let us fix it!</strong>
       </p>
+      <p>
+        <strong>New Services & Expansion.</strong>We are pleased to announce the completion of the amalgamation process between Pipeline Services and Huapai Plastic Welding, forming a single entity. This expanded company now provides Electrofusion Welding services to the civil trades, developers, plumbers, and others.
+      </p>
       <div class="mt-4">
         <h5>Contact Us</h5>
         {% comment %} <p class="mb-1">📍 {{ contact.address }}</p>
@@ -151,7 +809,7 @@
         {% endif %} {% endcomment %}
 
         <p class="mb-1">📞 <a href="tel:0224036067">0224036067</a></p>
-        <p class="mb-1">📧 <a href="mailto:hpwrepair@gmail.com">hpwrepair@gmail.com</a></p>
+        <p class="mb-1">📧 <a href="mailto:admin@plastixwelding.co.nz">admin@plastixwelding.co.nz</a></p>
         <p>🔗 <a href="https://www.facebook.com/p/Huapai-Plastic-Welding-Repairs-61557365655758/" target="_blank" rel="noopener noreferrer">Find us on Facebook</a></p>
       </div>
     </div>
@@ -165,6 +823,311 @@
 
 <!-- Optional Additional Section -->
 {% include 'partials/_commitment.html' %}
+
+<!-- Testimonials Section -->
+<section class="testimonials container my-5 py-4">
+    <div class="text-center mb-5">
+        <p class="services-label">Testimonials</p>
+        <h2 class="mb-3">What Our Clients Say</h2>
+        <p class="text-muted">Hear from our satisfied customers about their experience with our services</p>
+    </div>
+    
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-4 justify-content-center">
+                    <!-- Testimonial 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=0171bb&color=fff" 
+                                         alt="John Doe" 
+                                         class="rounded-circle" 
+                                         width="60" 
+                                         height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">John Doe</h5>
+                                    <div class="text-warning mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="small text-muted mb-0">2 weeks ago</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"Outstanding service! Fixed my kayak perfectly and the repair is barely noticeable. Highly recommend their plastic welding expertise."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Wilson&background=0171bb&color=fff" 
+                                         alt="Sarah Wilson" 
+                                         class="rounded-circle" 
+                                         width="60" 
+                                         height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Sarah Wilson</h5>
+                                    <div class="text-warning mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="small text-muted mb-0">1 month ago</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"Quick response and excellent work on our farm's water tank. Saved us from having to replace the whole unit. Very professional service!"</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <img src="https://ui-avatars.com/api/?name=Mike+Taylor&background=0171bb&color=fff" 
+                                         alt="Mike Taylor" 
+                                         class="rounded-circle" 
+                                         width="60" 
+                                         height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Mike Taylor</h5>
+                                    <div class="text-warning mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="small text-muted mb-0">3 weeks ago</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"Had my car's bumper repaired after a minor accident. The work was done perfectly and at a very reasonable price. Will definitely use again!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 (Additional testimonials) -->
+            <div class="carousel-item">
+                <div class="row g-4 justify-content-center">
+                    <!-- Testimonial 4 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <img src="https://ui-avatars.com/api/?name=Lisa+Chen&background=0171bb&color=fff" 
+                                         alt="Lisa Chen" 
+                                         class="rounded-circle" 
+                                         width="60" 
+                                         height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Lisa Chen</h5>
+                                    <div class="text-warning mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="small text-muted mb-0">1 week ago</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"Fixed our spa pool perfectly after we thought it was beyond repair. The service was quick and the staff were very professional."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <img src="https://ui-avatars.com/api/?name=David+Brown&background=0171bb&color=fff" 
+                                         alt="David Brown" 
+                                         class="rounded-circle" 
+                                         width="60" 
+                                         height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">David Brown</h5>
+                                    <div class="text-warning mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="small text-muted mb-0">2 months ago</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"The team did an amazing job fixing our boat's fiberglass damage. The repair is solid and looks great. Very happy with the service!"</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 6 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4">
+                            <div class="d-flex mb-3">
+                                <div class="me-3">
+                                    <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=0171bb&color=fff" 
+                                         alt="Emma Wilson" 
+                                         class="rounded-circle" 
+                                         width="60" 
+                                         height="60">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Emma Wilson</h5>
+                                    <div class="text-warning mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <p class="small text-muted mb-0">3 weeks ago</p>
+                                </div>
+                            </div>
+                            <p class="card-text">"Fixed our caravan's plastic fixtures that were damaged in transit. The work was done quickly and professionally. Highly recommended!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators-container mt-4">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Services Highlight Section */
+    .services-highlight .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .services-highlight .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1) !important;
+    }
+    
+    .services-highlight .card-title {
+        color: #333;
+        font-weight: 600;
+    }
+    
+    .services-highlight .list-unstyled li {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .services-highlight .list-unstyled li:last-child {
+        border-bottom: none;
+    }
+    
+    .services-highlight .btn-outline-primary {
+        border-width: 2px;
+        font-weight: 500;
+    }
+    
+    .services-highlight .btn-outline-primary:hover {
+        background-color: #0171bb;
+        border-color: #0171bb;
+    }
+    
+    .services-highlight .bg-primary {
+        background-color: #0171bb !important;
+    }
+    
+    .services-highlight .text-primary {
+        color: #0171bb !important;
+    }
+    
+    .services-highlight .btn-primary {
+        background-color: #0171bb;
+        border-color: #0171bb;
+        font-weight: 500;
+    }
+    
+    .services-highlight .btn-primary:hover {
+        background-color: #015a8d;
+        border-color: #015a8d;
+    }
+    
+    .testimonials {
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+    }
+    
+    .testimonials .card {
+        transition: transform 0.3s ease;
+        border-radius: 0.5rem;
+    }
+    
+    .testimonials .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Carousel Indicators Styling */
+    .carousel-indicators-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .carousel-indicators {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        margin: 0 6px;
+        border-radius: 50%;
+        background-color: #dee2e6;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .carousel-indicators li.active {
+        background-color: #0171bb;
+        transform: scale(1.2);
+    }
+    
+    .carousel-indicators li:hover {
+        background-color: #6c757d;
+    }
+    
+    /* Hide carousel navigation arrows */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+</style>
 
 <!-- Contact Form Section -->
 <section class="contact container bg-white rounded shadow-sm p-4 my-5" id="contact">
